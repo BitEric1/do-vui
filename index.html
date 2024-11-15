@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Đố vui có thưởng</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">
+                        <img
+                            src="./assets/icon/logo.png"
+                            alt=""
+                            class="logo__img"
+                        />
+                    </div>
+                    <nav class="navbar">
+                        <div class="navbar__item">
+                            <div class="navbar__icon">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <h2 class="navbar__item-heading">
+                                <a
+                                    href="https://www.facebook.com/biteric1/"
+                                    class="navbar__link"
+                                >
+                                    Facebook
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="navbar__item">
+                            <div class="navbar__icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <h2 class="navbar__item-heading">
+                                <a href="#!" class="navbar__link"> Twitter </a>
+                            </h2>
+                        </div>
+                        <div class="navbar__item">
+                            <div class="navbar__icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <h2 class="navbar__item-heading">
+                                <a href="#!" class="navbar__link">
+                                    Instagram
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="navbar__item">
+                            <div class="navbar__icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <h2 class="navbar__item-heading">
+                                <a href="#!" class="navbar__link"> Giuhub </a>
+                            </h2>
+                        </div>
+                    </nav>
+
+                    <div class="action"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="wrapper">
+                <div class="left">
+                    <!-- Nhap ten -->
+                    <div class="user">
+                        <h1 class="user-name">
+                            Chào bạn
+                            <strong id="input-name" class="text-color"></strong>
+                        </h1>
+
+                        <div class="user-avatar">
+                            <input
+                                type="file"
+                                name=""
+                                id="imgInput"
+                                accept="image/*"
+                                class="user-input"
+                                style="display: none"
+                            />
+                            <img
+                                src="./assets/img/avatar.jpg"
+                                alt=""
+                                id="imgPreview"
+                                class="imgPreview"
+                            />
+                            <p id="img-desc" class="img-desc">
+                                Bấm để chọn avatar của bạn
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Chon hinh anh lam dai dien -->
+                    <button id="startBtn" class="btn btn-grad">
+                        Click me!
+                    </button>
+
+                    <div class="timer-wrapper">
+                        <div class="timer">
+                            <span id="date" class="date">14 - 11 - 2024</span>
+                            <p class="time-title">Today, <span id="daily" class="text-color">Monday</span></p>
+                            <span class="time text-color"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="right" class="right">
+                    <h1 class="text-color text">
+                        Rất vui vì bạn đã truy cập trang web của tớ
+                    </h1>
+                    <div class="ifame-wrap">
+                        <iframe
+                            src="https://www.youtube.com/embed/FN7ALfpGxiI?autoplay=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <h1 class="text-color text">
+                        Để bắt đầu thử thách bạn ấn nút Click me nha
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay" class="overlay"></div>
+
+        <div id="modal" class="modal">
+            <div class="modal-wrap">
+                <div id="modal-icon" class="modal-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <div class="modal-gif">
+                    <img
+                        src="./assets/img/giphy.gif"
+                        alt=""
+                        class="modal-gif-img"
+                    />
+                </div>
+
+                <h1 class="modal-heading">Hi bạn, nhập tên để bắt đầu nha^^</h1>
+
+                <div class="modal-content">
+                    <input
+                        id="modal-input-name"
+                        type="text"
+                        placeholder="Nhập tên để bắt đầu"
+                        class="modal-input"
+                        required
+                        autocomplete="off"
+                    />
+                    <button id="modal-start" class="btn btn-grad">Start</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sendMessageButton" class="message">
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <div class="message-text">
+                <p>Liên hệ tớ tại đây</p>
+            </div>
+        </div>
+
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+        <p class="copyright">© 2024 Creat by BitEric. All rights reserved.</p>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
