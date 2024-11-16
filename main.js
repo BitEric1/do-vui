@@ -418,6 +418,11 @@ function resetLocal() {
                 text: "Bạn vừa xóa dữ liệu đã lưu",
                 icon: "success",
                 timer: 2000,
+                customClass: {
+                    confirmButton: "popup-btn sussess",
+                    cancelButton: "popup-btn cancel",
+                    popup: "my-custom-font-size",
+                }
             });
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             Swal.fire({
@@ -425,6 +430,11 @@ function resetLocal() {
                 text: "Bạn đã hủy thao tác",
                 icon: "success",
                 timer: 2000,
+                customClass: {
+                    confirmButton: "popup-btn sussess",
+                    cancelButton: "popup-btn cancel",
+                    popup: "my-custom-font-size",
+                }
             });
             hideModal();
         }
