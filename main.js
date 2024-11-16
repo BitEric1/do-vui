@@ -75,10 +75,12 @@ function addLevel1() {
                         </h1>
                         <p class="desc">
                             Hãy sắp xếp các chữ cái sau đây thành một câu có
-                            nghĩa (khóa của đáp án là 3 theo bảng chữ cái)
+                            nghĩa (khóa của đáp án là 3 theo bảng chữ cái). <br>
+                            Chỉ cần nhập đúng theo từng hàng, nhập liền các chữ cái sau khi giải mã là được nha
                         </p>
                         <strong>
-                            Ví dụ: Nếu chữ cái là A thì đáp án sẽ là D
+                            Ví dụ: Nếu chữ cái là D thì đáp án sẽ là A, <br>
+                            Nếu chữ cái là E thì đáp án sẽ là sẽ là B...
                         </strong>
                     </div>
                     <div class="right-body">
