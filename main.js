@@ -407,20 +407,27 @@ function resetLocal() {
     }).then((result) => {
         if (result.isConfirmed) {
             localStorage.removeItem("userName");
-
-            showModal();
-
-            swalWithBootstrapButtons.fire({
+            hideModal();
+            setTimeout(() => {
+                showModal();
+            }, 2001);
+            Swal.fire({
                 title: "Đã xóa",
                 text: "Bạn vừa xóa dữ liệu đã lưu",
                 icon: "success",
+                timer: 2000,
             });
         } else if (result.dismiss === Swal.DismissReason.cancel) {
-            swalWithBootstrapButtons.fire({
+            Swal.fire({
                 title: "Đã hủy",
                 text: "Bạn đã hủy thao tác",
                 icon: "success",
+                timer: 2000,
             });
+            hideModal();
+        }
+        else {
+            hideModal();
         }
     });
 }
@@ -487,19 +494,14 @@ document.getElementById("modal-start").addEventListener("click", () => {
     hideModal();
 });
 
-let check = false;
-
 document.addEventListener("DOMContentLoaded", () => {
-    resetLocal();
-    if (localStorage.getItem("userName") !== null) {
-        inputName.textContent = localStorage.getItem("userName");
-        check = true;
-    } else {
-        check = false;
-    }
+    if (!localStorage.getItem("firstVisit")) {
+        localStorage.setItem("firstVisit", "true");
 
-    if (check) {
-        hideModal();
+        showModal();
+    } else if (localStorage.getItem("userName") !== null) {
+        inputName.textContent = localStorage.getItem("userName");
+        resetLocal();
     } else {
         showModal();
     }
@@ -514,7 +516,7 @@ document
 const week = {
     0: "Sunday",
     1: "Monday",
-    2: "Tusday",
+    2: "Tuesday",
     3: "Wednesday",
     4: "Thursday",
     5: "Friday",
@@ -548,7 +550,6 @@ document
         event.preventDefault();
         const userName = document.getElementById("modal-input-name").value;
 
-        console.log("Received userName:", userName);
         try {
             const response = await fetch("http://localhost:3000/save", {
                 method: "POST",
@@ -557,10 +558,7 @@ document
             });
 
             const result = await response.json();
-            document.getElementById("responseMessage").textContent =
-                result.message;
         } catch (error) {
-            document.getElementById("responseMessage").textContent =
-                "Có lỗi xảy ra!";
+            console.log("Có lỗi xảy ra!");
         }
     });
