@@ -378,6 +378,10 @@ a {
     display: block;
 }
 
+.user-cnt {
+    margin-top: 20px;
+}
+
 .answer-action {
     position: relative;
     width: 330px;

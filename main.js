@@ -79,8 +79,9 @@ function addLevel1() {
                             Chỉ cần nhập đúng theo từng hàng, nhập liền các chữ cái sau khi giải mã là được nha.
                         </p>
                         <strong>
-                            Ví dụ: Nếu chữ cái là D thì đáp án sẽ là A,...<br>
-                            Các chữ khác tương tự.
+                            Lưu ý: Khóa là 3 theo bảng chữ cái nha...<br>
+                            Để ý kĩ gợi ý này. <br>
+                            Chúc các bạn may mắn^^
                         </strong>
                     </div>
                     <div class="right-body">
