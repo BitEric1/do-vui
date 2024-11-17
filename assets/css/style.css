@@ -308,6 +308,7 @@ a {
 .charactor-wrap:hover {
     background-position: right center;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .charactor {
