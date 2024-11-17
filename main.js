@@ -74,8 +74,7 @@ function addLevel1() {
                             <strong class="text-color">dưới đây</strong>
                         </h1>
                         <p class="desc">
-                            Hãy sắp xếp các chữ cái sau đây thành một câu có
-                            nghĩa (khóa của đáp án là 3 theo bảng chữ cái). <br>
+                            Hãy sắp xếp các chữ cái sau đây thành trật tự đúng <br> (khóa của đáp án là 3 theo bảng chữ cái). <br>
                             Chỉ cần nhập đúng theo từng hàng, nhập liền các chữ cái sau khi giải mã là được nha.
                         </p>
                         <strong>
@@ -178,7 +177,7 @@ function addLevel2() {
                     dễ hơn nên mình sẽ không gợi ý (nhập câu trả
                     lời có dấu viết hoa chữ cái đầu nha).
                   </p>
-                  <strong> Chúc các bạn may mắn </strong>
+                  <strong> Chúc các bạn may mắn. </strong>
                 </div>
                 <div class="content-top">
                   <img
